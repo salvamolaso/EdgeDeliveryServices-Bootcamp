@@ -30,8 +30,7 @@ indices:
           attribute(el, 'content')
 experiments:
     include:
-      - '/'
-      - '/**'
+      - '/experiments/**'
     target: /experiments/query-index.json
     properties:
       experiment:
