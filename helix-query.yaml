@@ -5,7 +5,7 @@ indices:
       - '/**'
     exclude:
       - '**/bootcamp/**'
-    target: /query-index.xlsx
+    target: /query-index.json
     properties:
       title:
         select: head > meta[property="og:title"]
@@ -15,6 +15,12 @@ indices:
         select: none
         value: |
           parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')
+      image:
+        select: head > meta[property="og:image"]
+        value: match(attribute(el, 'content'), 'https:\/\/[^/]+(\/.*)')
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, 'content')
       robots:
         select: head > meta[name="robots"]
         value: |

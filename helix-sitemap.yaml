@@ -1,5 +1,5 @@
  sitemaps:
-   example:
-     origin: https://www.example.com
+   salva.eds:
+     origin: https://www.salva.eds.com
      source: /query-index.json
      destination: /sitemap.xml
