@@ -1,6 +1,16 @@
  sitemaps:
    salva.eds:
      origin: https://www.salva.eds.com
-     source: /query-index.json
+     default: en
      lastmod: YYYY-MM-DD
-     destination: /sitemap.xml
+     languages:
+      en:
+        source: /query-index.json
+        alternate: /{path}.html
+        destination: /cc-shared/assets/sitemap.xml
+        hreflang: en-US
+      es:
+        source: /es/query-index.json
+        alternate: /es/{path}.html
+        destination: /es/sitemap.xml
+        hreflang: es
