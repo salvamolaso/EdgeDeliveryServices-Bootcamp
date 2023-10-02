@@ -5,6 +5,7 @@ indices:
       - '/**'
     exclude:
       - '**/bootcamp/**'
+      - '**/experiments/**'
     target: /query-index.json
     properties:
       title:
