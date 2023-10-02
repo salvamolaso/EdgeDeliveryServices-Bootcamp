@@ -28,3 +28,15 @@ indices:
         select: head > meta[name="robots"]
         value: |
           attribute(el, 'content')
+experiments:
+    include:
+      - '/'
+      - '/**'
+    target: /experiments/query-index.json
+    properties:
+      experiment:
+        select: head > meta[property="experiment"]
+        value: attribute(el, 'content')
+      instant-experiment:
+        select: head > meta[property="instant-experiment"]
+        value: attribute(el, 'content')
