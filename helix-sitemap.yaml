@@ -2,5 +2,5 @@
    salva.eds:
      origin: https://www.salva.eds.com
      source: /query-index.json
-     lastmod: YYYY-MM-DD
+     lastModified: YYYY-MM-DD
      destination: /sitemap.xml
