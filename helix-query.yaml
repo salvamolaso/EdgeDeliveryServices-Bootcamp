@@ -8,6 +8,8 @@ indices:
     exclude:
       - '/bootcamp/**'
       - '/experiments/**'
+      - '/es'
+      - '/es/**'
     target: /query-index.json
     properties: &minPros
       title:
