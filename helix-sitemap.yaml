@@ -7,8 +7,8 @@
       en:
         source: /query-index.json
         alternate: /{path}.html
-        destination: /cc-shared/assets/sitemap.xml
-        hreflang: en-US
+        destination: /sitemap.xml
+        hreflang: en
       es:
         source: /es/query-index.json
         alternate: /es/{path}.html
