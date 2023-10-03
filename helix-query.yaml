@@ -1,13 +1,15 @@
+vesion: 1
+
 indices:
-  sitemap:
+  sitemap_en:
     include:
       - '/'
       - '/**'
     exclude:
-      - '**/bootcamp/**'
-      - '**/experiments/**'
+      - '/bootcamp/**'
+      - '/experiments/**'
     target: /query-index.json
-    properties:
+    properties: &minPros
       title:
         select: head > meta[property="og:title"]
         value: |
@@ -29,7 +31,17 @@ indices:
         select: head > meta[name="robots"]
         value: |
           attribute(el, 'content')
-experiments:
+  sitemap_es:
+    include:
+      - '/es'
+      - '/es/**'
+    exclude:
+      - '/es/bootcamp/**'
+      - '/es/experiments/**'
+    target: /es/query-index.json
+    properties:
+      <<: *minPros
+  experiments:
     include:
       - '/experiments/**'
     target: /experiments/query-index.json
