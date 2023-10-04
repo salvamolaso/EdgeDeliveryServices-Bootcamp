@@ -49,8 +49,8 @@ indices:
     target: /experiments/query-index.json
     properties:
       experiment:
-        select: head > meta[property="experiment"]
+        select: head > meta[name="experiment"]
         value: attribute(el, 'content')
       instant-experiment:
-        select: head > meta[property="instant-experiment"]
+        select: head > meta[name="instant-experiment"]
         value: attribute(el, 'content')
